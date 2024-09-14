@@ -13,6 +13,10 @@
 - Basic endpoints for login, register, update user name and update user password
 - Dockerization (to use it just if you want it)
 
+### Before to begin...
+- Copy/Paste .env.example file and rename the copy as .env
+- Adjust .env variables as needed
+
 ### Localhost Deployment
 ```
 composer install

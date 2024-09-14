@@ -29,7 +29,7 @@ return [
         /*
          * Description rendered on the home page of the API documentation (`/docs/api`).
          */
-        'description' => 'Novelingo API documentation',
+        'description' => 'Hi! Here JJRuizDeveloper. You can change this text in config/scramble.php',
     ],
 
     /*
@@ -54,7 +54,7 @@ return [
         /*
          * URL to an image that displays as a small square logo next to the title, above the table of contents.
          */
-        'logo' => 'https://gogodev.net/descargas/novelingo.png',
+        'logo' => 'https://gogodev.net/descargas/64.png',
 
         /*
          * Use to fetch the credential policy for the Try It feature. Options are: omit, include (default), and same-origin
