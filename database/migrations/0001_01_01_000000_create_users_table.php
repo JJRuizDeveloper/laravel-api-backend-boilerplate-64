@@ -14,8 +14,21 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('last_name');
+            $table->string('vat')->unique();
+            $table->string('address');
+            $table->string('zipcode');
+            $table->string('city');
+            $table->string('country');
+            $table->string('phone_prefix');
+            $table->string('phone');
+            $table->string('birthday');
+            $table->enum('gender', ['MALE', 'FEMALE', 'OTHER']);
+            $table->string('username');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('email_verification_code')->nullable(); // It will be used for email verification and recovery password options
+            $table->dateTime('password_reset_expiration')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

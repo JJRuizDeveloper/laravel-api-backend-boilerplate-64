@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\User;
+use App\Observers\UserObserver;
 use Dedoc\Scramble\Scramble;
 use Dedoc\Scramble\Support\Generator\OpenApi;
 use Dedoc\Scramble\Support\Generator\SecurityScheme;
@@ -24,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Observers
+        User::observe(UserObserver::class);
+
         // Permissions to view the API Docs
         Gate::define('viewApiDocs', function (User $user) {
             //return in_array($user->email, ['admin@app.com']);

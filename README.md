@@ -10,9 +10,10 @@
 
 ### This boilerplate includes
 - Auto API Docs generation following the SCRAMBLE annotation rules
-- Basic endpoints for login, register, update user name and update user password
+- Basic endpoints for login, register, recover password, email verification, update user name and update user password
 - Dockerization (to use it just if you want it)
 - Dynamic Language: You can setup the available lenguages to response in config/app locales variable. Then, Frontends can request using Accept Language to specify the answer language
+- English and Spanish translations added
 
 ### Before to begin...
 - Copy/Paste .env.example file and rename the copy as .env
