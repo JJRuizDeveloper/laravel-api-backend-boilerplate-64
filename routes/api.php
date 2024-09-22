@@ -13,6 +13,10 @@ Route::prefix('auth')->middleware([Localization::class])->group(function () {
 });
 
 
+Route::prefix('herobanner')->middleware([Localization::class])->group(function () {
+    Route::get('/', [App\Http\Controllers\HerobannerController::class, 'getLatestHerobanner']);
+});
+
 Route::prefix('user')->middleware([Localization::class])->group(function () {
     Route::middleware(['auth:sanctum'])->post('/update-password', [App\Http\Controllers\UserController::class, 'updatePassword']);
     Route::middleware(['auth:sanctum'])->post('/update-name', [App\Http\Controllers\UserController::class, 'updateName']);

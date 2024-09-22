@@ -136,6 +136,7 @@ class AuthController extends Controller
      * Send Recover Password Email
      * 
      * This endpoint sends an email to the user with a link to recover their password (create a new one).
+     * @unauthenticated
      * @param SendRecoverPassowrdEmailRequest $request
      * @return JsonResponse
      */
@@ -166,6 +167,7 @@ class AuthController extends Controller
      * Reset Password
      * 
      * This endpoint checks if the user can reset the password and, if he can, set up the new password
+     * @unauthenticated
      * @param ResetPasswordRequest $request
      * @return JsonResponse
      */

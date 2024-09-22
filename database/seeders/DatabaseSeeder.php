@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-          // HERE THE CLASSES TO BE CALLED
+          HerobannerSeeder::class,
         ]);
     }
 }
