@@ -20,4 +20,5 @@ Route::prefix('herobanner')->middleware([Localization::class])->group(function (
 Route::prefix('user')->middleware([Localization::class])->group(function () {
     Route::middleware(['auth:sanctum'])->post('/update-password', [App\Http\Controllers\UserController::class, 'updatePassword']);
     Route::middleware(['auth:sanctum'])->post('/update-name', [App\Http\Controllers\UserController::class, 'updateName']);
+    Route::middleware(['auth:sanctum'])->post('/update-full-profile', [App\Http\Controllers\UserController::class, 'updateFullProfile']);
 });

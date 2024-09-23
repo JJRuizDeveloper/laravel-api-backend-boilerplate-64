@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Auth\RegisterUserRequest;
+use App\Http\Requests\User\UpdateFullProfileRequest;
 use App\Http\Requests\User\UpdateNameRequest;
 use App\Http\Requests\User\UpdatePasswordRequest;
 use Illuminate\Http\JsonResponse;
@@ -60,5 +62,41 @@ class UserController extends Controller
             'success' => true,
             'data' => $user
         ]);
+    }
+
+    /**
+     * Update Full Profile
+     * 
+     * This endpoint allows native new users edit their profiles.
+     * @param UpdateFullProfileRequest $request
+     * @return JsonResponse
+     */
+    public function updateFullProfile(UpdateFullProfileRequest $request): JsonResponse
+    {
+
+        $user = auth()->user();
+
+        $user->update([
+            'name' => $request->name,
+            'last_name' => $request->last_name,
+            'vat' => $request->vat,
+            'address' => $request->address,
+            'zipcode' => $request->zipcode,
+            'city' => $request->city,
+            'country' => $request->country,
+            'phone_prefix' => $request->phone_prefix,
+            'phone' => $request->phone,
+            'birthday' => $request->birthday,
+            'gender' => $request->gender,
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ]);
+
+        return response()->json([
+            'status' => true,
+            'message' => __('app.success'),
+            'user' => $user
+        ], 200);
     }
 }
