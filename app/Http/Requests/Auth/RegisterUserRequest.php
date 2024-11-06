@@ -22,17 +22,17 @@ class RegisterUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:3|max:100',
-            'last_name' => 'required|min:3|max:100',
-            'vat' => 'required|min:3|max:20',
-            'address' => 'required|min:3|max:100',
-            'zipcode' => 'required|min:4|max:9',
-            'city' => 'required|min:3|max:100',
-            'country' => 'required|min:3|max:100',
-            'phone_prefix' => 'required|min:1|max:5',
-            'phone' => 'required|numeric|digits_between:9,12',
-            'birthday' => 'required|min:10|max:10',
-            'gender' => 'required|in:MALE,FEMALE,OTHER',
+            'name' => 'nullable|min:3|max:100',
+            'last_name' => 'nullable|min:3|max:100',
+            'vat' => 'nullable|min:3|max:20',
+            'address' => 'nullable|min:3|max:100',
+            'zipcode' => 'nullable|min:4|max:9',
+            'city' => 'nullable|min:3|max:100',
+            'country_id' => 'nullable|exists:countries,id',
+            'phone_prefix' => 'nullable|min:1|max:5',
+            'phone' => 'nullable|numeric|digits_between:9,12',
+            'birthday' => 'nullable|min:10|max:10',
+            'gender' => 'nullable|in:MALE,FEMALE,OTHER',
             'username' => 'required|min:3|max:100|unique:users,username',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|confirmed'

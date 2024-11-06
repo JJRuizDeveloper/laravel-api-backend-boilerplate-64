@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
           HerobannerSeeder::class,
+          CountrySeeder::class
         ]);
     }
 }

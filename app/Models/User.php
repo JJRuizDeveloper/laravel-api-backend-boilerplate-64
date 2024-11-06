@@ -43,4 +43,9 @@ class User extends Authenticatable
         ];
     }
 
+    public function country()
+    {
+        return $this->belognsTo(Country::class);
+    }
+
 }

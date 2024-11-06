@@ -10,15 +10,24 @@
 - NodeJS
 
 ### This boilerplate includes
-- NEW!! - Admin Panel using FilamentPHP
-- NEW!! - Roles and Permissions managed by Admin Panel
-- NEW!! - Users Management by Admin Panel
-- Coming Soon - Admin Panel translation
 - Auto API Docs generation following the SCRAMBLE annotation rules
 - Basic endpoints for login, register, recover password, email verification, update user name and update user password
+- Herobanner endpoints with locale support
 - Dockerization (to use it just if you want it)
 - Dynamic Language: You can setup the available lenguages to response in config/app locales variable. Then, Frontends can request using Accept Language to specify the answer language
 - English and Spanish translations added
+- AWS Support
+- Country Model with Seeder
+- Enhanced User Model
+- Admin Panel using FilamentPHP
+- Roles and Permissions managed by Admin Panel
+- Users Management by Admin Panel
+- Country Management by Admin Panel
+
+- Coming Soon - Admin Panel translation Manager
+- Coming Soon - Country Model Endpoints
+- Coming Soon - Herobanner management in Admin Panel
+- Coming Soon - Enhanced user columns can be managed in Admin Panel
 
 ### Before to begin...
 - Copy/Paste .env.example file and rename the copy as .env
@@ -27,10 +36,13 @@
 ```
 composer install
 php artisan migrate --seed
+php artisan key:generate
+npm i
 ```
 
 ### Localhost Deployment
 ```
+npm run dev
 php artisan serve
 ```
 
@@ -46,7 +58,6 @@ docker-compose ps
 docker-compose exec app php artisan migrate --seed
 
 ```
-
 
 ### API Documentation
 API Documentation is auto-generated following the SCRAMBLE annotation rules
@@ -69,7 +80,7 @@ npm run build
 ```
 
 ### Coming Soon: Admin Panel Translation
-TODO
+
 
 
 ### Extra Docs
@@ -81,3 +92,8 @@ https://filamentphp.com/plugins/hexters-hexa
 
 Api Doc generator:
 https://scramble.dedoc.co/
+
+
+Coming Soon translation manager:
+
+

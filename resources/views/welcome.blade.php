@@ -29,10 +29,10 @@
         <img src={{ asset('assets/img/imago.png') }} width="30%" />
         <h2>64 Backend</h2>
         <h5>Status: <span style="color: lightgreen;">[OK 200]</span></h5>
-        <h5 style="margin-top: -20px;">Powered by <a href="https://64train.com" style="color: lightsalmon;">64 Software Train</a></h5>
         <h5 style="margin-top: -20px;">Go to <a href="{{env('APP_URL').'/docs/api'}}" style="color: lightsalmon;">API DOCUMENTATION</a></h5>
-        <h5 style="margin-top: -20px;">Go to <a href="{{env('APP_URL').'/admin'}}" style="color: lightsalmon;">Admin Panel</a></h5>
-        <h5>v.0.0.2</h5>
+        <h5 style="margin-top: -20px;">Go to <a href="{{env('APP_URL').'/admin'}}" style="color: lightsalmon;">ADMIN PANEL</a></h5>
+        <h5>v.0.0.3</h5>
+        <h5 style="margin-top: -20px;">Powered by <a href="https://64train.com" style="color: lightsalmon;">64 Software Train</a></h5>
     </div>
 </body>
 

@@ -28,7 +28,7 @@ class UpdateFullProfileRequest extends FormRequest
             'address' => 'required|min:3|max:100',
             'zipcode' => 'required|min:4|max:9',
             'city' => 'required|min:3|max:100',
-            'country' => 'required|min:3|max:100',
+            'country_id' => 'nullable|exists:countries,id',
             'phone_prefix' => 'required|min:1|max:5',
             'phone' => 'required|numeric|digits_between:9,12',
             'birthday' => 'required|min:10|max:10',

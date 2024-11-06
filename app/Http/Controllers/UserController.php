@@ -14,7 +14,7 @@ class UserController extends Controller
 {
     /**
      * Update User Password
-     * 
+     *
      * This endpoint update's the user password. Users can only update his own password.
      * @param UpdatePasswordRequest $request
      * @return JsonResponse
@@ -44,7 +44,7 @@ class UserController extends Controller
 
     /**
      * Update User Name
-     * 
+     *
      * This endpoint update's the user name. Users can only update his own name.
      * @param UpdateNameRequest $request
      * @return JsonResponse
@@ -66,7 +66,7 @@ class UserController extends Controller
 
     /**
      * Update Full Profile
-     * 
+     *
      * This endpoint allows native new users edit their profiles.
      * @param UpdateFullProfileRequest $request
      * @return JsonResponse
@@ -83,7 +83,7 @@ class UserController extends Controller
             'address' => $request->address,
             'zipcode' => $request->zipcode,
             'city' => $request->city,
-            'country' => $request->country,
+            'country_id' => $request->country_id,
             'phone_prefix' => $request->phone_prefix,
             'phone' => $request->phone,
             'birthday' => $request->birthday,

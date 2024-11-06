@@ -22,7 +22,7 @@ class AuthController extends Controller
 {
     /**
      * Login User
-     * 
+     *
      * This endpoint allows native user login.
      * @unauthenticated
      * @param Request $request
@@ -52,7 +52,7 @@ class AuthController extends Controller
 
     /**
      * Create User
-     * 
+     *
      * This endpoint allows native new user registrations.
      * @unauthenticated
      * @param RegisterUserRequest $request
@@ -68,7 +68,7 @@ class AuthController extends Controller
             'address' => $request->address,
             'zipcode' => $request->zipcode,
             'city' => $request->city,
-            'country' => $request->country,
+            'country_id' => $request->country_id,
             'phone_prefix' => $request->phone_prefix,
             'phone' => $request->phone,
             'birthday' => $request->birthday,
@@ -88,7 +88,7 @@ class AuthController extends Controller
 
      /**
      * Send Verification Email To User
-     * 
+     *
      * This endpoint send a new verification email to user.
      * @return JsonResponse
      */
@@ -107,7 +107,7 @@ class AuthController extends Controller
 
      /**
      * Check Email Verification Code
-     * 
+     *
      * This endpoint check if the email verification code is valid.
      * @param RegisterUserRequest $request
      * @return JsonResponse
@@ -134,7 +134,7 @@ class AuthController extends Controller
 
     /**
      * Send Recover Password Email
-     * 
+     *
      * This endpoint sends an email to the user with a link to recover their password (create a new one).
      * @unauthenticated
      * @param SendRecoverPassowrdEmailRequest $request
@@ -165,7 +165,7 @@ class AuthController extends Controller
 
     /**
      * Reset Password
-     * 
+     *
      * This endpoint checks if the user can reset the password and, if he can, set up the new password
      * @unauthenticated
      * @param ResetPasswordRequest $request
